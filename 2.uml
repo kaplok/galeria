@@ -1,0 +1,41 @@
+@startuml
+entity image {
+* id: serial
+* image_name: text(32)
+* uploader: text(16)
+* created_at: date
+* last_edited: date
+* description: text(256)
+* privacy: bool
+  
+}
+
+entity comment {
+*id: serial
+*user: text(16)
+*contents: text(256)
+*date_posted: date
+
+}
+
+entity tag {
+*id: serial
+*tag_name: text(16)
+}
+
+entity album {
+*id: serial
+*album_name: text(32)
+*creator: text(16)
+*description: text(256)
+*created_at: date
+*last_edited: date
+*privacy: bool
+}
+
+image }|-- tag 
+image }|-- album
+image }|-- comment
+
+
+@enduml

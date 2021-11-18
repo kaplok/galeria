@@ -1,0 +1,37 @@
+@startuml
+entity image {
+* image_name
+*uploader
+* created_at
+* last_edited
+* description
+* privacy
+  
+}
+
+entity comment {
+*user
+*contents
+*date_posted
+
+}
+
+entity tag {
+*tag_name
+}
+
+entity album {
+*album_name
+*creator
+*description
+*created_at
+*last_edited
+*privacy
+}
+
+image }|-- tag 
+image }|-- album
+image }|-- comment
+
+
+@enduml

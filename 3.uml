@@ -1,0 +1,66 @@
+@startuml
+entity image {
+* id: serial
+* image_name: text(32)
+* user_id: unsigned bigint
+* created_at: date
+* last_edited: date
+* description: text(256)
+* privacy: bool
+  
+}
+
+entity comment {
+*id: serial
+*user_id: unsigned bigint
+*contents: text(256)
+*date_posted: date
+*image_id: unsigned bigint
+
+}
+
+entity tag {
+*id: serial
+*tag_name: text(16)
+}
+
+entity album {
+*id: serial
+*album_name: text(32)
+*user_id: unsigned bigint
+*description: text(256)
+*created_at: date
+*last_edited: date
+*privacy: bool
+}
+
+entity image_tag{
+  * id: (composite_key[image_id, tag_id])
+  *image_id: unsigned bigint
+  *tag_id: unsigned bigint
+}
+
+entity image_album{
+  *id: (composite_key[image_id, album_id])
+  *image_id: unsigned bigint
+  *album_id: unsignet bigint
+}
+
+entity user{
+  *id: serial
+  *name: text(16)
+}
+
+
+
+image }|-- image_tag 
+image_tag }|-- tag
+image }|-- image_album
+image_album }|-- album
+image }|-- comment
+album }|-- user
+comment }|-- user
+
+
+
+@enduml
