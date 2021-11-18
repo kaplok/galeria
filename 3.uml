@@ -53,13 +53,13 @@ entity user{
 
 
 
-image }|-- image_tag 
-image_tag }|-- tag
-image }|-- image_album
-image_album }|-- album
-image }|-- comment
-album }|-- user
-comment }|-- user
+image |o--|| image_tag 
+image_tag ||--o{ tag
+image |o--|| image_album
+image_album ||--o{ album
+image }o--|| comment
+album ||--o{ user
+comment ||--o{ user
 
 
 

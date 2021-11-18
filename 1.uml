@@ -29,9 +29,9 @@ entity album {
 *privacy
 }
 
-image }|-- tag 
-image }|-- album
-image }|-- comment
+image }o--o{ tag 
+image |o--o{ album
+image }o--|| comment
 
 
 @enduml
