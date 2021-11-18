@@ -1,7 +1,7 @@
+todo -1 add all people to github
 todo 0 change date to timestamp
 todo 0 change text to varchar and give it max length
 todo 1 find sql ide
 todo 2 add composite key manually
 todo 3 add relations manually
-todo 7 add all people to github
 todo 9 check how other groups did it
