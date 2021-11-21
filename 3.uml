@@ -1,11 +1,11 @@
 @startuml
 entity image {
 * id: serial
-* image_name: text(32)
+* image_name: varchar(32)
 * user_id: unsigned bigint
-* created_at: date
-* last_edited: date
-* description: text(256)
+* created_at: timestamp
+* last_edited: timestamp
+* description: varchar(256)
 * privacy: bool
   
 }
@@ -13,24 +13,24 @@ entity image {
 entity comment {
 *id: serial
 *user_id: unsigned bigint
-*contents: text(256)
-*date_posted: date
+*contents: varchar(256)
+*date_posted: timestamp
 *image_id: unsigned bigint
 
 }
 
 entity tag {
 *id: serial
-*tag_name: text(16)
+*tag_name: varchar(16)
 }
 
 entity album {
 *id: serial
-*album_name: text(32)
+*album_name: varchar(32)
 *user_id: unsigned bigint
-*description: text(256)
-*created_at: date
-*last_edited: date
+*description: varchar(256)
+*created_at: timestamp
+*last_edited: timestamp
 *privacy: bool
 }
 
@@ -48,18 +48,18 @@ entity image_album{
 
 entity user{
   *id: serial
-  *name: text(16)
+  *name: varchar(16)
 }
 
 
 
-image |o--|| image_tag 
-image_tag ||--o{ tag
-image |o--|| image_album
-image_album ||--o{ album
-image }o--|| comment
-album ||--o{ user
-comment ||--o{ user
+image ||--o|  image_tag 
+image_tag }o--|| tag
+image ||--o| image_album
+image_album }o--|| album
+image ||--o{ comment
+album }o--|| user
+comment }o--|| user
 
 
 

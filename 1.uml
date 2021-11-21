@@ -1,7 +1,7 @@
 @startuml
 entity image {
 * image_name
-*uploader
+* uploader
 * created_at
 * last_edited
 * description
@@ -10,28 +10,28 @@ entity image {
 }
 
 entity comment {
-*user
-*contents
-*date_posted
+* user
+* contents
+* date_posted
 
 }
 
 entity tag {
-*tag_name
+* tag_name
 }
 
 entity album {
-*album_name
-*creator
-*description
-*created_at
-*last_edited
-*privacy
+* album_name
+* creator
+* description
+* created_at
+* last_edited
+* privacy
 }
 
 image }o--o{ tag 
 image |o--o{ album
-image }o--|| comment
+image ||--o{ comment
 
 
 @enduml

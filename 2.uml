@@ -1,41 +1,41 @@
 @startuml
 entity image {
 * id: serial
-* image_name: text(32)
-* uploader: text(16)
-* created_at: date
-* last_edited: date
-* description: text(256)
+* image_name: varchar(32)
+* uploader: varchar(16)
+* created_at: timestamp
+* last_edited: timestamp
+* description: varchar(256)
 * privacy: bool
   
 }
 
 entity comment {
 *id: serial
-*user: text(16)
-*contents: text(256)
-*date_posted: date
+*user: varchar(16)
+*contents: varchar(256)
+*date_posted: timestamp
 
 }
 
 entity tag {
 *id: serial
-*tag_name: text(16)
+*tag_name: varchar(16)
 }
 
 entity album {
 *id: serial
-*album_name: text(32)
-*creator: text(16)
-*description: text(256)
-*created_at: date
-*last_edited: date
+*album_name: varchar(32)
+*creator: varchar(16)
+*description: varchar(256)
+*created_at: timestamp
+*last_edited: timestamp
 *privacy: bool
 }
 
 image }o--o{ tag 
 image }o--o{ album
-image }o--|| comment
+image ||--o{ comment
 
 
 @enduml
