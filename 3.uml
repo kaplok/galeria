@@ -52,11 +52,11 @@ entity user{
 }
 
 
-
-image ||--o|  image_tag 
+user ||--o{ image
+image ||--o{  image_tag 
 image_tag }o--|| tag
-image ||--o| image_album
-image_album }o--|| album
+image ||--o{ image_album
+image_album }o--||album
 image ||--o{ comment
 album }o--|| user
 comment }o--|| user
