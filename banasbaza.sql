@@ -129,54 +129,51 @@ CREATE TABLE `user` (
 --
 ALTER TABLE `album`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `Id` (`id`),
-  ADD KEY `user_id` (`user_id`);
+  ADD UNIQUE KEY  (`id`),
+  ADD KEY  (`user_id`);
 
 --
 -- Indeksy dla tabeli `comment`
 --
 ALTER TABLE `comment`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id` (`id`),
-  ADD KEY `user_id` (`user_id`,`image_id`),
-  ADD KEY `image_id` (`image_id`);
+  ADD UNIQUE KEY (`id`),
+  ADD KEY  (`user_id`,`image_id`);
+
 
 --
 -- Indeksy dla tabeli `image`
 --
 ALTER TABLE `image`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id` (`id`),
-  ADD KEY `user_id` (`user_id`);
+  ADD UNIQUE KEY  (`id`),
+  ADD KEY  (`user_id`);
 
 --
 -- Indeksy dla tabeli `image_album`
 --
 ALTER TABLE `image_album`
-  ADD KEY `image_id` (`image_id`,`album_id`),
-  ADD KEY `album_id` (`album_id`);
+  ADD KEY  (`image_id`,`album_id`);
 
 --
 -- Indeksy dla tabeli `image_tag`
 --
 ALTER TABLE `image_tag`
-  ADD KEY `image_id` (`image_id`,`tag_id`),
-  ADD KEY `tag_id` (`tag_id`);
+  ADD KEY  (`image_id`,`tag_id`);
 
 --
 -- Indeksy dla tabeli `tag`
 --
 ALTER TABLE `tag`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id` (`id`);
+  ADD UNIQUE KEY (`id`);
 
 --
 -- Indeksy dla tabeli `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `Id` (`id`),
-  ADD UNIQUE KEY `id_2` (`id`);
+  ADD UNIQUE KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
