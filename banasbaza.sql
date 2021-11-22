@@ -242,41 +242,14 @@ ALTER TABLE `image_tag`
 
 
 --
--- Metadane
+-- Ograniczenia dla tabeli `image`
 --
+ALTER TABLE `image`
+  ADD CONSTRAINT `image_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
+
+
 USE `phpmyadmin`;
 
---
--- Metadane dla tabeli album
---
-
---
--- Metadane dla tabeli comment
---
-
---
--- Metadane dla tabeli image
---
-
---
--- Metadane dla tabeli image_album
---
-
---
--- Metadane dla tabeli image_tag
---
-
---
--- Metadane dla tabeli tag
---
-
---
--- Metadane dla tabeli user
---
-
---
--- Metadane dla Bazy danych banasbaza
---
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
