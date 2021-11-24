@@ -31,13 +31,16 @@ USE `banasbaza`;
 
 DROP TABLE IF EXISTS `album`;
 CREATE TABLE `album` (
-  `id` bigint(20) UNSIGNED NOT NULL,
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `user_id` bigint(20) UNSIGNED NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `last_edited` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `privacy` tinyint(1) NOT NULL,
   `album_name` varchar(32) NOT NULL,
-  `description` varchar(256) NOT NULL
+  `description` varchar(256) NOT NULL,
+  PRIMARY KEY (`id`),
+	UNIQUE KEY `id` (`id`),
+	FOREIGN KEY(`id_user`) REFERENCES `user`(`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -48,11 +51,16 @@ CREATE TABLE `album` (
 
 DROP TABLE IF EXISTS `comment`;
 CREATE TABLE `comment` (
-  `id` bigint(20) UNSIGNED NOT NULL,
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `user_id` bigint(20) UNSIGNED NOT NULL,
   `date_posted_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `image_id` bigint(20) UNSIGNED NOT NULL,
-  `contents` varchar(256) NOT NULL
+  `contents` varchar(256) NOT NULL,
+   PRIMARY KEY (`id`),
+   UNIQUE KEY (`id`),
+  FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
+  FOREIGN KEY (`image_id`) REFERENCES `image` (`id`)
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -63,13 +71,16 @@ CREATE TABLE `comment` (
 
 DROP TABLE IF EXISTS `image`;
 CREATE TABLE `image` (
-  `id` bigint(20) UNSIGNED NOT NULL,
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `user_id` bigint(20) UNSIGNED NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `last_edited` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `privacy` tinyint(1) NOT NULL,
   `image_name` varchar(32) NOT NULL,
-  `description` varchar(256) NOT NULL
+  `description` varchar(256) NOT NULL,
+   PRIMARY KEY (`id`),
+   UNIQUE KEY  (`id`),
+ FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -81,7 +92,9 @@ CREATE TABLE `image` (
 DROP TABLE IF EXISTS `image_album`;
 CREATE TABLE `image_album` (
   `image_id` bigint(20) UNSIGNED NOT NULL,
-  `album_id` bigint(20) UNSIGNED NOT NULL
+  `album_id` bigint(20) UNSIGNED NOT NULL,
+  FOREIGN KEY (`album_id`) REFERENCES `album` (`id`),
+  FOREIGN KEY (`image_id`) REFERENCES `image` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -93,7 +106,11 @@ CREATE TABLE `image_album` (
 DROP TABLE IF EXISTS `image_tag`;
 CREATE TABLE `image_tag` (
   `image_id` bigint(20) UNSIGNED NOT NULL,
-  `tag_id` bigint(20) UNSIGNED NOT NULL
+  `tag_id` bigint(20) UNSIGNED NOT NULL,
+  KEY  (`image_id`,`album_id`),
+  FOREIGN KEY (`image_id`) REFERENCES `image` (`id`),
+  FOREIGN KEY (`tag_id`) REFERENCES `tag` (`id`)
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -104,8 +121,10 @@ CREATE TABLE `image_tag` (
 
 DROP TABLE IF EXISTS `tag`;
 CREATE TABLE `tag` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `tag_name` varchar(16) NOT NULL
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `tag_name` varchar(16) NOT NULL,
+   PRIMARY KEY (`id`),
+   UNIQUE KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -116,136 +135,12 @@ CREATE TABLE `tag` (
 
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(16) NOT NULL
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` varchar(16) NOT NULL,
+  PRIMARY KEY (`id`),
+	UNIQUE KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Indeksy dla zrzutów tabel
---
-
---
--- Indeksy dla tabeli `album`
---
-ALTER TABLE `album`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY  (`id`),
-  ADD KEY  (`user_id`);
-
---
--- Indeksy dla tabeli `comment`
---
-ALTER TABLE `comment`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY (`id`),
-  ADD KEY  (`user_id`,`image_id`);
-
-
---
--- Indeksy dla tabeli `image`
---
-ALTER TABLE `image`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY  (`id`),
-  ADD KEY  (`user_id`);
-
---
--- Indeksy dla tabeli `image_album`
---
-ALTER TABLE `image_album`
-  ADD KEY  (`image_id`,`album_id`);
-
---
--- Indeksy dla tabeli `image_tag`
---
-ALTER TABLE `image_tag`
-  ADD KEY  (`image_id`,`tag_id`);
-
---
--- Indeksy dla tabeli `tag`
---
-ALTER TABLE `tag`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY (`id`);
-
---
--- Indeksy dla tabeli `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT dla tabeli `album`
---
-ALTER TABLE `album`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT dla tabeli `comment`
---
-ALTER TABLE `comment`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT dla tabeli `image`
---
-ALTER TABLE `image`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT dla tabeli `tag`
---
-ALTER TABLE `tag`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT dla tabeli `user`
---
-ALTER TABLE `user`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- Ograniczenia dla zrzutów tabel
---
-
---
--- Ograniczenia dla tabeli `album`
---
-ALTER TABLE `album`
-  ADD CONSTRAINT `album_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
-
---
--- Ograniczenia dla tabeli `comment`
---
-ALTER TABLE `comment`
-  ADD CONSTRAINT `comment_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
-  ADD CONSTRAINT `comment_ibfk_2` FOREIGN KEY (`image_id`) REFERENCES `image` (`id`);
-
---
--- Ograniczenia dla tabeli `image_album`
---
-ALTER TABLE `image_album`
-  ADD CONSTRAINT `image_album_ibfk_1` FOREIGN KEY (`album_id`) REFERENCES `album` (`id`),
-  ADD CONSTRAINT `image_album_ibfk_2` FOREIGN KEY (`image_id`) REFERENCES `image` (`id`);
-
---
--- Ograniczenia dla tabeli `image_tag`
---
-ALTER TABLE `image_tag`
-  ADD CONSTRAINT `image_tag_ibfk_1` FOREIGN KEY (`image_id`) REFERENCES `image` (`id`),
-  ADD CONSTRAINT `image_tag_ibfk_2` FOREIGN KEY (`tag_id`) REFERENCES `tag` (`id`);
-
-
---
--- Ograniczenia dla tabeli `image`
---
-ALTER TABLE `image`
-  ADD CONSTRAINT `image_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
 
 
 USE `phpmyadmin`;
