@@ -57,7 +57,7 @@ DROP TABLE IF EXISTS `album`;
 CREATE TABLE `album` (
   `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `user_id` bigint(20) UNSIGNED NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `last_edited` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `privacy` tinyint(1) NOT NULL,
   `album_name` varchar(32) NOT NULL,
@@ -76,7 +76,7 @@ DROP TABLE IF EXISTS `image`;
 CREATE TABLE `image` (
   `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `user_id` bigint(20) UNSIGNED NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `last_edited` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `privacy` tinyint(1) NOT NULL,
   `image_name` varchar(32) NOT NULL,
@@ -95,7 +95,7 @@ DROP TABLE IF EXISTS `comment`;
 CREATE TABLE `comment` (
   `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `user_id` bigint(20) UNSIGNED NOT NULL,
-  `date_posted_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `date_posted_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `image_id` bigint(20) UNSIGNED NOT NULL,
   `contents` varchar(256) NOT NULL,
    PRIMARY KEY (`id`),
