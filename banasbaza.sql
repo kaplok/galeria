@@ -22,7 +22,31 @@ SET time_zone = "+00:00";
 --
 CREATE DATABASE IF NOT EXISTS `banasbaza` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `banasbaza`;
+-- --------------------------------------------------------
 
+--
+-- Struktura tabeli dla tabeli `tag`
+--
+DROP TABLE IF EXISTS `tag`;
+CREATE TABLE `tag` (
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `tag_name` varchar(16) NOT NULL,
+   PRIMARY KEY (`id`),
+   UNIQUE KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user` (
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` varchar(16) NOT NULL,
+  PRIMARY KEY (`id`),
+	UNIQUE KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 -- --------------------------------------------------------
 
 --
@@ -42,7 +66,25 @@ CREATE TABLE `album` (
 	UNIQUE KEY `id` (`id`),
 	FOREIGN KEY(`user_id`) REFERENCES `user`(`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+-- --------------------------------------------------------
 
+--
+-- Struktura tabeli dla tabeli `image`
+--
+
+DROP TABLE IF EXISTS `image`;
+CREATE TABLE `image` (
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `user_id` bigint(20) UNSIGNED NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `last_edited` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `privacy` tinyint(1) NOT NULL,
+  `image_name` varchar(32) NOT NULL,
+  `description` varchar(256) NOT NULL,
+   PRIMARY KEY (`id`),
+   UNIQUE KEY  (`id`),
+ FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 -- --------------------------------------------------------
 
 --
@@ -63,25 +105,7 @@ CREATE TABLE `comment` (
 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
 
---
--- Struktura tabeli dla tabeli `image`
---
-
-DROP TABLE IF EXISTS `image`;
-CREATE TABLE `image` (
-  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `user_id` bigint(20) UNSIGNED NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `last_edited` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `privacy` tinyint(1) NOT NULL,
-  `image_name` varchar(32) NOT NULL,
-  `description` varchar(256) NOT NULL,
-   PRIMARY KEY (`id`),
-   UNIQUE KEY  (`id`),
- FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -107,39 +131,17 @@ DROP TABLE IF EXISTS `image_tag`;
 CREATE TABLE `image_tag` (
   `image_id` bigint(20) UNSIGNED NOT NULL,
   `tag_id` bigint(20) UNSIGNED NOT NULL,
-  KEY  (`image_id`,`album_id`),
+  KEY  (`image_id`,`tag_id`),
   FOREIGN KEY (`image_id`) REFERENCES `image` (`id`),
   FOREIGN KEY (`tag_id`) REFERENCES `tag` (`id`)
 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
 
---
--- Struktura tabeli dla tabeli `tag`
---
 
-DROP TABLE IF EXISTS `tag`;
-CREATE TABLE `tag` (
-  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `tag_name` varchar(16) NOT NULL,
-   PRIMARY KEY (`id`),
-   UNIQUE KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
 
---
--- Struktura tabeli dla tabeli `user`
---
 
-DROP TABLE IF EXISTS `user`;
-CREATE TABLE `user` (
-  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `name` varchar(16) NOT NULL,
-  PRIMARY KEY (`id`),
-	UNIQUE KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
 
