@@ -40,7 +40,7 @@ CREATE TABLE `album` (
   `description` varchar(256) NOT NULL,
   PRIMARY KEY (`id`),
 	UNIQUE KEY `id` (`id`),
-	FOREIGN KEY(`id_user`) REFERENCES `user`(`id`)
+	FOREIGN KEY(`user_id`) REFERENCES `user`(`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
