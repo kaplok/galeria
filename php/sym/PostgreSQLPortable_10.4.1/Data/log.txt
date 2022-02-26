@@ -47,3 +47,15 @@
 2022-02-26 20:28:38.515 CET [22492] WARNING:  could not create listen socket for "localhost"
 2022-02-26 20:28:38.515 CET [22492] FATAL:  could not create any TCP/IP sockets
 2022-02-26 20:28:38.515 CET [22492] LOG:  database system is shut down
+2022-02-26 20:32:34.119 CET [5652] LOG:  listening on IPv6 address "::1", port 5432
+2022-02-26 20:32:34.119 CET [5652] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-02-26 20:32:34.130 CET [5652] FATAL:  could not open directory "pg_tblspc": No such file or directory
+2022-02-26 20:32:34.132 CET [5652] LOG:  database system is shut down
+2022-02-26 20:32:41.668 CET [17992] LOG:  listening on IPv6 address "::1", port 5432
+2022-02-26 20:32:41.668 CET [17992] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-02-26 20:32:41.679 CET [17992] FATAL:  could not open directory "pg_tblspc": No such file or directory
+2022-02-26 20:32:41.682 CET [17992] LOG:  database system is shut down
+2022-02-26 20:33:14.551 CET [17932] LOG:  listening on IPv6 address "::1", port 5432
+2022-02-26 20:33:14.551 CET [17932] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-02-26 20:33:14.562 CET [17932] FATAL:  could not open directory "pg_tblspc": No such file or directory
+2022-02-26 20:33:14.564 CET [17932] LOG:  database system is shut down
