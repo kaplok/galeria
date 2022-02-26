@@ -1,0 +1,49 @@
+2022-02-26 20:24:41.790 CET [53852] LOG:  could not bind IPv6 address "::1": Permission denied
+2022-02-26 20:24:41.790 CET [53852] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2022-02-26 20:24:41.790 CET [53852] LOG:  could not bind IPv4 address "127.0.0.1": Permission denied
+2022-02-26 20:24:41.790 CET [53852] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2022-02-26 20:24:41.791 CET [53852] WARNING:  could not create listen socket for "localhost"
+2022-02-26 20:24:41.791 CET [53852] FATAL:  could not create any TCP/IP sockets
+2022-02-26 20:24:41.791 CET [53852] LOG:  database system is shut down
+2022-02-26 20:24:52.181 CET [9740] LOG:  could not bind IPv6 address "::1": Permission denied
+2022-02-26 20:24:52.181 CET [9740] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2022-02-26 20:24:52.181 CET [9740] LOG:  could not bind IPv4 address "127.0.0.1": Permission denied
+2022-02-26 20:24:52.181 CET [9740] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2022-02-26 20:24:52.181 CET [9740] WARNING:  could not create listen socket for "localhost"
+2022-02-26 20:24:52.181 CET [9740] FATAL:  could not create any TCP/IP sockets
+2022-02-26 20:24:52.181 CET [9740] LOG:  database system is shut down
+2022-02-26 20:25:08.369 CET [56844] LOG:  could not bind IPv6 address "::1": Permission denied
+2022-02-26 20:25:08.369 CET [56844] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2022-02-26 20:25:08.369 CET [56844] LOG:  could not bind IPv4 address "127.0.0.1": Permission denied
+2022-02-26 20:25:08.369 CET [56844] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2022-02-26 20:25:08.369 CET [56844] WARNING:  could not create listen socket for "localhost"
+2022-02-26 20:25:08.370 CET [56844] FATAL:  could not create any TCP/IP sockets
+2022-02-26 20:25:08.370 CET [56844] LOG:  database system is shut down
+2022-02-26 20:27:33.045 CET [59600] LOG:  could not bind IPv6 address "::1": Permission denied
+2022-02-26 20:27:33.045 CET [59600] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2022-02-26 20:27:33.045 CET [59600] LOG:  could not bind IPv4 address "127.0.0.1": Permission denied
+2022-02-26 20:27:33.045 CET [59600] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2022-02-26 20:27:33.045 CET [59600] WARNING:  could not create listen socket for "localhost"
+2022-02-26 20:27:33.045 CET [59600] FATAL:  could not create any TCP/IP sockets
+2022-02-26 20:27:33.045 CET [59600] LOG:  database system is shut down
+2022-02-26 20:27:35.717 CET [58792] LOG:  could not bind IPv6 address "::1": Permission denied
+2022-02-26 20:27:35.717 CET [58792] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2022-02-26 20:27:35.717 CET [58792] LOG:  could not bind IPv4 address "127.0.0.1": Permission denied
+2022-02-26 20:27:35.717 CET [58792] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2022-02-26 20:27:35.717 CET [58792] WARNING:  could not create listen socket for "localhost"
+2022-02-26 20:27:35.717 CET [58792] FATAL:  could not create any TCP/IP sockets
+2022-02-26 20:27:35.717 CET [58792] LOG:  database system is shut down
+2022-02-26 20:27:39.357 CET [60200] LOG:  could not bind IPv6 address "::1": Permission denied
+2022-02-26 20:27:39.357 CET [60200] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2022-02-26 20:27:39.357 CET [60200] LOG:  could not bind IPv4 address "127.0.0.1": Permission denied
+2022-02-26 20:27:39.357 CET [60200] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2022-02-26 20:27:39.357 CET [60200] WARNING:  could not create listen socket for "localhost"
+2022-02-26 20:27:39.358 CET [60200] FATAL:  could not create any TCP/IP sockets
+2022-02-26 20:27:39.358 CET [60200] LOG:  database system is shut down
+2022-02-26 20:28:38.515 CET [22492] LOG:  could not bind IPv6 address "::1": Permission denied
+2022-02-26 20:28:38.515 CET [22492] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2022-02-26 20:28:38.515 CET [22492] LOG:  could not bind IPv4 address "127.0.0.1": Permission denied
+2022-02-26 20:28:38.515 CET [22492] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2022-02-26 20:28:38.515 CET [22492] WARNING:  could not create listen socket for "localhost"
+2022-02-26 20:28:38.515 CET [22492] FATAL:  could not create any TCP/IP sockets
+2022-02-26 20:28:38.515 CET [22492] LOG:  database system is shut down
