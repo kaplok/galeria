@@ -59,3 +59,20 @@
 2022-02-26 20:33:14.551 CET [17932] LOG:  listening on IPv4 address "127.0.0.1", port 5432
 2022-02-26 20:33:14.562 CET [17932] FATAL:  could not open directory "pg_tblspc": No such file or directory
 2022-02-26 20:33:14.564 CET [17932] LOG:  database system is shut down
+2022-03-06 15:04:33.637 CET [1964] LOG:  listening on IPv6 address "::1", port 5432
+2022-03-06 15:04:33.637 CET [1964] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-03-06 15:04:33.653 CET [1964] FATAL:  could not open directory "pg_tblspc": No such file or directory
+2022-03-06 15:04:33.656 CET [1964] LOG:  database system is shut down
+2022-03-06 15:10:15.515 CET [16692] LOG:  listening on IPv6 address "::1", port 5432
+2022-03-06 15:10:15.515 CET [16692] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-03-06 15:10:15.528 CET [16692] FATAL:  could not open directory "pg_tblspc": No such file or directory
+2022-03-06 15:10:15.530 CET [16692] LOG:  database system is shut down
+2022-03-06 15:25:49.350 CET [15048] LOG:  could not bind IPv6 address "::1": Only one usage of each socket address (protocol/network address/port) is normally permitted.
+	
+2022-03-06 15:25:49.350 CET [15048] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2022-03-06 15:25:49.350 CET [15048] LOG:  could not bind IPv4 address "127.0.0.1": Only one usage of each socket address (protocol/network address/port) is normally permitted.
+	
+2022-03-06 15:25:49.350 CET [15048] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2022-03-06 15:25:49.350 CET [15048] WARNING:  could not create listen socket for "localhost"
+2022-03-06 15:25:49.350 CET [15048] FATAL:  could not create any TCP/IP sockets
+2022-03-06 15:25:49.350 CET [15048] LOG:  database system is shut down

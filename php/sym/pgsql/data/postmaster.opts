@@ -1,1 +1,1 @@
-C:/Users/ForenseFase2/Downloads/postgresql-12.4-1-windows-x64-binaries/pgsql/bin/postgres.exe "-D" "C:/Users/ForenseFase2/Downloads/postgresql-12.4-1-windows-x64-binaries/pgsql/data"
+C:/Github/galeria/php/sym/pgsql/bin/postgres.exe "-D" "C:/Github/galeria/php/sym/pgsql/data"
