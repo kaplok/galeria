@@ -1,0 +1,323 @@
+11:08:37  [main] 	Initializing Control Panel
+11:08:37  [main] 	Windows Version:  Home  64-bit
+11:08:37  [main] 	XAMPP Version: 8.1.4
+11:08:37  [main] 	Control Panel Version: 3.3.0  [ Compiled: Apr 6th 2021 ]
+11:08:37  [main] 	Running with Administrator rights - good!
+11:08:37  [main] 	XAMPP Installation Directory: "c:\github\galeria\php\sym\xampp\"
+11:08:37  [main] 	Checking for prerequisites
+11:08:38  [main] 	All prerequisites found
+11:08:38  [main] 	Initializing Modules
+11:08:38  [Apache] 	Apache Service detected with wrong path
+11:08:38  [Apache] 	Change XAMPP Apache and Control Panel settings or
+11:08:38  [Apache] 	Uninstall/disable the other service manually first
+11:08:38  [Apache] 	Found Path: "C:\xampp\apache\bin\httpd.exe" -k runservice
+11:08:38  [Apache] 	Expected Path: "c:\github\galeria\php\sym\xampp\apache\bin\httpd.exe" -k runservice
+11:08:38  [Apache] 	Problem detected!
+11:08:38  [Apache] 	Port 80 in use by ""C:\xampp\apache\bin\httpd.exe" -k runservice" with PID 9816!
+11:08:38  [Apache] 	Apache WILL NOT start without the configured ports free!
+11:08:38  [Apache] 	You need to uninstall/disable/reconfigure the blocking application
+11:08:38  [Apache] 	or reconfigure Apache and the Control Panel to listen on a different port
+11:08:38  [Apache] 	Problem detected!
+11:08:38  [Apache] 	Port 443 in use by ""C:\xampp\apache\bin\httpd.exe" -k runservice" with PID 9816!
+11:08:38  [Apache] 	Apache WILL NOT start without the configured ports free!
+11:08:38  [Apache] 	You need to uninstall/disable/reconfigure the blocking application
+11:08:38  [Apache] 	or reconfigure Apache and the Control Panel to listen on a different port
+11:08:38  [main] 	The FileZilla module is disabled
+11:08:38  [main] 	The Mercury module is disabled
+11:08:38  [Tomcat] 	Problem detected: Tomcat Not Found!
+11:08:38  [Tomcat] 	Disabling Tomcat buttons
+11:08:38  [Tomcat] 	Run this program from your XAMPP root directory!
+11:08:38  [main] 	Starting Check-Timer
+11:08:38  [main] 	Control Panel Ready
+11:08:40  [Apache] 	Problem detected!
+11:08:40  [Apache] 	Port 80 in use by ""C:\xampp\apache\bin\httpd.exe" -k runservice" with PID 9816!
+11:08:40  [Apache] 	Apache WILL NOT start without the configured ports free!
+11:08:40  [Apache] 	You need to uninstall/disable/reconfigure the blocking application
+11:08:40  [Apache] 	or reconfigure Apache and the Control Panel to listen on a different port
+11:08:40  [Apache] 	Problem detected!
+11:08:40  [Apache] 	Port 443 in use by ""C:\xampp\apache\bin\httpd.exe" -k runservice" with PID 9816!
+11:08:40  [Apache] 	Apache WILL NOT start without the configured ports free!
+11:08:40  [Apache] 	You need to uninstall/disable/reconfigure the blocking application
+11:08:40  [Apache] 	or reconfigure Apache and the Control Panel to listen on a different port
+11:08:40  [Apache] 	Attempting to start Apache app...
+11:08:43  [mysql] 	Attempting to start MySQL app...
+11:08:43  [mysql] 	Status change detected: running
+11:08:49  [Apache] 	Problem detected!
+11:08:49  [Apache] 	Port 80 in use by ""C:\xampp\apache\bin\httpd.exe" -k runservice" with PID 9816!
+11:08:49  [Apache] 	Apache WILL NOT start without the configured ports free!
+11:08:49  [Apache] 	You need to uninstall/disable/reconfigure the blocking application
+11:08:49  [Apache] 	or reconfigure Apache and the Control Panel to listen on a different port
+11:08:49  [Apache] 	Problem detected!
+11:08:49  [Apache] 	Port 443 in use by ""C:\xampp\apache\bin\httpd.exe" -k runservice" with PID 9816!
+11:08:49  [Apache] 	Apache WILL NOT start without the configured ports free!
+11:08:49  [Apache] 	You need to uninstall/disable/reconfigure the blocking application
+11:08:49  [Apache] 	or reconfigure Apache and the Control Panel to listen on a different port
+11:08:49  [Apache] 	Attempting to start Apache app...
+11:09:34  [mysql] 	Status change detected: stopped
+11:09:34  [mysql] 	Error: MySQL shutdown unexpectedly.
+11:09:34  [mysql] 	This may be due to a blocked port, missing dependencies, 
+11:09:34  [mysql] 	improper privileges, a crash, or a shutdown by another method.
+11:09:34  [mysql] 	Press the Logs button to view error logs and check
+11:09:34  [mysql] 	the Windows Event Viewer for more clues
+11:09:34  [mysql] 	If you need more help, copy and post this
+11:09:34  [mysql] 	entire log window on the forums
+11:09:34  [Apache] 	Attempting to start Apache app...
+11:09:39  [mysql] 	Attempting to start MySQL app...
+11:09:39  [mysql] 	Status change detected: running
+11:09:40  [mysql] 	Attempting to stop MySQL app...
+11:09:41  [mysql] 	Status change detected: stopped
+11:09:41  [Apache] 	Attempting to start Apache app...
+11:09:52  [Apache] 	Attempting to start Apache app...
+11:09:57  [main] 	Deinitializing Modules
+11:09:57  [main] 	Deinitializing Control Panel
+
+11:12:07  [main] 	Initializing Control Panel
+11:12:07  [main] 	Windows Version:  Home  64-bit
+11:12:07  [main] 	XAMPP Version: 8.1.4
+11:12:07  [main] 	Control Panel Version: 3.3.0  [ Compiled: Apr 6th 2021 ]
+11:12:07  [main] 	Running with Administrator rights - good!
+11:12:07  [main] 	XAMPP Installation Directory: "c:\github\galeria\php\sym\xampp\"
+11:12:07  [main] 	Checking for prerequisites
+11:12:07  [main] 	All prerequisites found
+11:12:07  [main] 	Initializing Modules
+11:12:07  [main] 	The FileZilla module is disabled
+11:12:07  [main] 	The Mercury module is disabled
+11:12:07  [Tomcat] 	Problem detected: Tomcat Not Found!
+11:12:07  [Tomcat] 	Disabling Tomcat buttons
+11:12:07  [Tomcat] 	Run this program from your XAMPP root directory!
+11:12:07  [main] 	Starting Check-Timer
+11:12:07  [main] 	Control Panel Ready
+11:12:09  [Apache] 	Attempting to start Apache app...
+11:12:09  [Apache] 	Status change detected: running
+11:12:10  [Apache] 	Status change detected: stopped
+11:12:10  [Apache] 	Error: Apache shutdown unexpectedly.
+11:12:10  [Apache] 	This may be due to a blocked port, missing dependencies, 
+11:12:10  [Apache] 	improper privileges, a crash, or a shutdown by another method.
+11:12:10  [Apache] 	Press the Logs button to view error logs and check
+11:12:10  [Apache] 	the Windows Event Viewer for more clues
+11:12:10  [Apache] 	If you need more help, copy and post this
+11:12:10  [Apache] 	entire log window on the forums
+11:12:20  [main] 	Deinitializing Modules
+11:12:20  [main] 	Deinitializing Control Panel
+
+11:17:52  [main] 	Initializing Control Panel
+11:17:52  [main] 	Windows Version:  Home  64-bit
+11:17:52  [main] 	XAMPP Version: 8.1.4
+11:17:52  [main] 	Control Panel Version: 3.3.0  [ Compiled: Apr 6th 2021 ]
+11:17:52  [main] 	Running with Administrator rights - good!
+11:17:52  [main] 	XAMPP Installation Directory: "c:\github\galeria\php\sym\xampp\"
+11:17:52  [main] 	Checking for prerequisites
+11:17:52  [main] 	All prerequisites found
+11:17:52  [main] 	Initializing Modules
+11:17:52  [Apache] 	XAMPP Apache is already running on port 80
+11:17:52  [Apache] 	XAMPP Apache is already running on port 443
+11:17:52  [mysql] 	XAMPP MySQL is already running on port 3306
+11:17:52  [main] 	The FileZilla module is disabled
+11:17:52  [main] 	The Mercury module is disabled
+11:17:52  [Tomcat] 	Problem detected: Tomcat Not Found!
+11:17:52  [Tomcat] 	Disabling Tomcat buttons
+11:17:52  [Tomcat] 	Run this program from your XAMPP root directory!
+11:17:52  [main] 	Starting Check-Timer
+11:17:52  [main] 	Control Panel Ready
+11:18:37  [Apache] 	Status change detected: stopped
+11:18:37  [Apache] 	Error: Apache shutdown unexpectedly.
+11:18:37  [Apache] 	This may be due to a blocked port, missing dependencies, 
+11:18:37  [Apache] 	improper privileges, a crash, or a shutdown by another method.
+11:18:37  [Apache] 	Press the Logs button to view error logs and check
+11:18:37  [Apache] 	the Windows Event Viewer for more clues
+11:18:37  [Apache] 	If you need more help, copy and post this
+11:18:37  [Apache] 	entire log window on the forums
+11:18:38  [Apache] 	Status change detected: running
+11:18:49  [main] 	Deinitializing Modules
+11:18:49  [main] 	Deinitializing Control Panel
+
+11:12:37  [main] 	Initializing Control Panel
+11:12:37  [main] 	Windows Version:  Home  64-bit
+11:12:37  [main] 	XAMPP Version: 8.1.4
+11:12:37  [main] 	Control Panel Version: 3.3.0  [ Compiled: Apr 6th 2021 ]
+11:12:37  [main] 	Running with Administrator rights - good!
+11:12:37  [main] 	XAMPP Installation Directory: "c:\github\galeria\php\sym\xampp\"
+11:12:37  [main] 	Checking for prerequisites
+11:12:37  [main] 	All prerequisites found
+11:12:37  [main] 	Initializing Modules
+11:12:37  [main] 	The FileZilla module is disabled
+11:12:37  [main] 	The Mercury module is disabled
+11:12:37  [Tomcat] 	Problem detected: Tomcat Not Found!
+11:12:37  [Tomcat] 	Disabling Tomcat buttons
+11:12:37  [Tomcat] 	Run this program from your XAMPP root directory!
+11:12:37  [main] 	Starting Check-Timer
+11:12:37  [main] 	Control Panel Ready
+11:12:44  [Apache] 	Attempting to start Apache app...
+11:12:44  [Apache] 	Status change detected: running
+11:12:45  [Apache] 	Status change detected: stopped
+11:12:45  [Apache] 	Error: Apache shutdown unexpectedly.
+11:12:45  [Apache] 	This may be due to a blocked port, missing dependencies, 
+11:12:45  [Apache] 	improper privileges, a crash, or a shutdown by another method.
+11:12:45  [Apache] 	Press the Logs button to view error logs and check
+11:12:45  [Apache] 	the Windows Event Viewer for more clues
+11:12:45  [Apache] 	If you need more help, copy and post this
+11:12:45  [Apache] 	entire log window on the forums
+11:12:53  [Apache] 	Status change detected: running
+11:12:53  [Apache] 	Status change detected: stopped
+11:12:53  [Apache] 	Error: Apache shutdown unexpectedly.
+11:12:53  [Apache] 	This may be due to a blocked port, missing dependencies, 
+11:12:53  [Apache] 	improper privileges, a crash, or a shutdown by another method.
+11:12:53  [Apache] 	Press the Logs button to view error logs and check
+11:12:53  [Apache] 	the Windows Event Viewer for more clues
+11:12:53  [Apache] 	If you need more help, copy and post this
+11:12:54  [Apache] 	entire log window on the forums
+11:13:05  [Apache] 	Status change detected: running
+11:13:05  [Apache] 	Status change detected: stopped
+11:13:05  [Apache] 	Error: Apache shutdown unexpectedly.
+11:13:05  [Apache] 	This may be due to a blocked port, missing dependencies, 
+11:13:05  [Apache] 	improper privileges, a crash, or a shutdown by another method.
+11:13:05  [Apache] 	Press the Logs button to view error logs and check
+11:13:05  [Apache] 	the Windows Event Viewer for more clues
+11:13:05  [Apache] 	If you need more help, copy and post this
+11:13:05  [Apache] 	entire log window on the forums
+11:15:49  [Apache] 	Attempting to start Apache app...
+11:15:49  [Apache] 	Status change detected: running
+11:15:50  [Apache] 	Status change detected: stopped
+11:15:50  [Apache] 	Error: Apache shutdown unexpectedly.
+11:15:50  [Apache] 	This may be due to a blocked port, missing dependencies, 
+11:15:50  [Apache] 	improper privileges, a crash, or a shutdown by another method.
+11:15:50  [Apache] 	Press the Logs button to view error logs and check
+11:15:50  [Apache] 	the Windows Event Viewer for more clues
+11:15:50  [Apache] 	If you need more help, copy and post this
+11:15:50  [Apache] 	entire log window on the forums
+11:16:09  [Apache] 	Attempting to start Apache app...
+11:17:41  [Apache] 	Status change detected: running
+11:17:41  [mysql] 	Status change detected: running
+11:18:37  [Apache] 	Attempting to stop Apache (PID: 12140)
+11:18:37  [Apache] 	Status change detected: stopped
+11:18:38  [Apache] 	Attempting to start Apache app...
+11:18:38  [Apache] 	Status change detected: running
+11:18:51  [Apache] 	Attempting to stop Apache (PID: 10216)
+11:18:51  [Apache] 	Attempting to stop Apache (PID: 12420)
+11:18:51  [Apache] 	Status change detected: stopped
+11:18:52  [Apache] 	Attempting to start Apache app...
+11:18:52  [Apache] 	Status change detected: running
+11:19:00  [Apache] 	Attempting to stop Apache (PID: 7204)
+11:19:00  [Apache] 	Attempting to stop Apache (PID: 13912)
+11:19:00  [Apache] 	Status change detected: stopped
+11:19:00  [mysql] 	Attempting to stop MySQL app...
+11:19:01  [mysql] 	Status change detected: stopped
+11:19:57  [Apache] 	Status change detected: running
+11:19:57  [mysql] 	Status change detected: running
+11:20:36  [mysql] 	Status change detected: stopped
+11:20:37  [Apache] 	Status change detected: stopped
+11:20:49  [main] 	Deinitializing Modules
+11:20:49  [main] 	Deinitializing Control Panel
+
+11:20:00  [main] 	Initializing Control Panel
+11:20:00  [main] 	Windows Version:  Home  64-bit
+11:20:00  [main] 	XAMPP Version: 8.1.4
+11:20:00  [main] 	Control Panel Version: 3.3.0  [ Compiled: Apr 6th 2021 ]
+11:20:00  [main] 	Running with Administrator rights - good!
+11:20:00  [main] 	XAMPP Installation Directory: "c:\github\galeria\php\sym\xampp\"
+11:20:00  [main] 	Checking for prerequisites
+11:20:01  [main] 	All prerequisites found
+11:20:01  [main] 	Initializing Modules
+11:20:01  [Apache] 	XAMPP Apache is already running on port 80
+11:20:01  [Apache] 	XAMPP Apache is already running on port 443
+11:20:01  [mysql] 	XAMPP MySQL is already running on port 3306
+11:20:01  [main] 	The FileZilla module is disabled
+11:20:01  [main] 	The Mercury module is disabled
+11:20:01  [Tomcat] 	Problem detected: Tomcat Not Found!
+11:20:01  [Tomcat] 	Disabling Tomcat buttons
+11:20:01  [Tomcat] 	Run this program from your XAMPP root directory!
+11:20:01  [main] 	Starting Check-Timer
+11:20:01  [main] 	Control Panel Ready
+11:20:36  [mysql] 	Attempting to stop MySQL app...
+11:20:36  [mysql] 	Status change detected: stopped
+11:20:36  [Apache] 	Attempting to stop Apache (PID: 5992)
+11:20:36  [Apache] 	Attempting to stop Apache (PID: 12432)
+11:20:37  [Apache] 	Status change detected: stopped
+11:20:50  [main] 	Deinitializing Modules
+11:20:50  [main] 	Deinitializing Control Panel
+
+11:21:40  [main] 	Initializing Control Panel
+11:21:40  [main] 	Windows Version:  Home  64-bit
+11:21:40  [main] 	XAMPP Version: 8.1.4
+11:21:40  [main] 	Control Panel Version: 3.3.0  [ Compiled: Apr 6th 2021 ]
+11:21:40  [main] 	Running with Administrator rights - good!
+11:21:40  [main] 	XAMPP Installation Directory: "c:\github\galeria\php\sym\xampp\"
+11:21:40  [main] 	Checking for prerequisites
+11:21:40  [main] 	All prerequisites found
+11:21:40  [main] 	Initializing Modules
+11:21:40  [main] 	The FileZilla module is disabled
+11:21:40  [main] 	The Mercury module is disabled
+11:21:40  [Tomcat] 	Problem detected: Tomcat Not Found!
+11:21:40  [Tomcat] 	Disabling Tomcat buttons
+11:21:40  [Tomcat] 	Run this program from your XAMPP root directory!
+11:21:40  [main] 	Starting Check-Timer
+11:21:40  [main] 	Control Panel Ready
+11:21:41  [Apache] 	Attempting to start Apache app...
+11:21:41  [Apache] 	Status change detected: running
+11:21:42  [mysql] 	Attempting to start MySQL app...
+11:21:42  [mysql] 	Status change detected: running
+11:25:05  [Apache] 	Attempting to stop Apache (PID: 12552)
+11:25:05  [Apache] 	Attempting to stop Apache (PID: 14140)
+11:25:05  [Apache] 	Status change detected: stopped
+11:25:05  [mysql] 	Attempting to stop MySQL app...
+11:25:06  [mysql] 	Status change detected: stopped
+11:25:06  [Apache] 	Attempting to start Apache app...
+11:25:06  [Apache] 	Status change detected: running
+11:25:07  [mysql] 	Attempting to start MySQL app...
+11:25:07  [mysql] 	Status change detected: running
+11:25:47  [Apache] 	Attempting to stop Apache (PID: 11400)
+11:25:47  [Apache] 	Attempting to stop Apache (PID: 14540)
+11:25:47  [Apache] 	Status change detected: stopped
+11:25:47  [mysql] 	Attempting to stop MySQL app...
+11:25:47  [mysql] 	Status change detected: stopped
+11:25:50  [main] 	Deinitializing Modules
+11:25:50  [main] 	Deinitializing Control Panel
+
+19:26:06  [main] 	Initializing Control Panel
+19:26:06  [main] 	Windows Version:  Home  64-bit
+19:26:06  [main] 	XAMPP Version: 8.1.4
+19:26:06  [main] 	Control Panel Version: 3.3.0  [ Compiled: Apr 6th 2021 ]
+19:26:06  [main] 	Running with Administrator rights - good!
+19:26:06  [main] 	XAMPP Installation Directory: "c:\github\galeria\xampp\"
+19:26:06  [main] 	Checking for prerequisites
+19:26:06  [main] 	All prerequisites found
+19:26:06  [main] 	Initializing Modules
+19:26:06  [main] 	The FileZilla module is disabled
+19:26:06  [main] 	The Mercury module is disabled
+19:26:06  [Tomcat] 	Problem detected: Tomcat Not Found!
+19:26:06  [Tomcat] 	Disabling Tomcat buttons
+19:26:06  [Tomcat] 	Run this program from your XAMPP root directory!
+19:26:06  [main] 	Starting Check-Timer
+19:26:06  [main] 	Control Panel Ready
+19:26:08  [Apache] 	Attempting to start Apache app...
+19:26:08  [Apache] 	Status change detected: running
+19:26:09  [Apache] 	Status change detected: stopped
+19:26:09  [Apache] 	Error: Apache shutdown unexpectedly.
+19:26:09  [Apache] 	This may be due to a blocked port, missing dependencies, 
+19:26:09  [Apache] 	improper privileges, a crash, or a shutdown by another method.
+19:26:09  [Apache] 	Press the Logs button to view error logs and check
+19:26:09  [Apache] 	the Windows Event Viewer for more clues
+19:26:09  [Apache] 	If you need more help, copy and post this
+19:26:09  [Apache] 	entire log window on the forums
+19:26:09  [mysql] 	Attempting to start MySQL app...
+19:26:09  [mysql] 	Status change detected: running
+19:26:10  [mysql] 	Status change detected: stopped
+19:26:10  [mysql] 	Error: MySQL shutdown unexpectedly.
+19:26:10  [mysql] 	This may be due to a blocked port, missing dependencies, 
+19:26:10  [mysql] 	improper privileges, a crash, or a shutdown by another method.
+19:26:10  [mysql] 	Press the Logs button to view error logs and check
+19:26:10  [mysql] 	the Windows Event Viewer for more clues
+19:26:10  [mysql] 	If you need more help, copy and post this
+19:26:10  [mysql] 	entire log window on the forums
+19:26:24  [Apache] 	Attempting to start Apache app...
+19:26:24  [Apache] 	Status change detected: running
+19:26:30  [mysql] 	Attempting to start MySQL app...
+19:26:30  [mysql] 	Status change detected: running
+19:26:43  [Apache] 	Attempting to stop Apache (PID: 976)
+19:26:43  [Apache] 	Attempting to stop Apache (PID: 5832)
+19:26:44  [Apache] 	Status change detected: stopped
+19:26:44  [mysql] 	Attempting to stop MySQL app...
+19:26:44  [mysql] 	Status change detected: stopped
+19:26:59  [main] 	Deinitializing Modules
+19:26:59  [main] 	Deinitializing Control Panel
+
