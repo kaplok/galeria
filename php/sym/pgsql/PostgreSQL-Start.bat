@@ -1,1 +1,0 @@
-"%CD%\bin\pg_ctl.exe" start -D "%CD%\data"
