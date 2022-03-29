@@ -1,0 +1,11 @@
+[
+    {
+         "version": "8.1.14",
+         "path": "C:\Github\galeria\xampp",
+         "php_path": "C:\Github\galeria\xampp\php",
+         "fpm_path": "",
+         "cgi_path": "",
+         "server_type": 2,
+         "is_default": true
+     }
+ ]
