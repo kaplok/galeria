@@ -6,13 +6,17 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use ApiPlatform\Core\Annotation\ApiResource;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * Image
  *
  * @ORM\Table(name="image", uniqueConstraints={@ORM\UniqueConstraint(name="id", columns={"id"})}, indexes={@ORM\Index(name="user_id", columns={"user_id"})})
  * @ORM\Entity
- * @ApiResource()
+ * @ApiResource(
+ *   normalizationContext={"groups" = {"read"}},
+ *   denormalizationContext={"groups" = {"write"}}
+ * )
  */
 class Image
 {
@@ -22,6 +26,7 @@ class Image
      * @ORM\Column(name="id", type="bigint", nullable=false, options={"unsigned"=true})
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
+    * @Groups({"read", "write"})
      */
     private $id;
 
@@ -29,6 +34,7 @@ class Image
      * @var \DateTime
      *
      * @ORM\Column(name="created_at", type="datetime", nullable=false, options={"default"="current_timestamp()"})
+     * @Groups({"read"})
      */
     private $createdAt = 'current_timestamp()';
 
@@ -36,6 +42,7 @@ class Image
      * @var \DateTime
      *
      * @ORM\Column(name="last_edited", type="datetime", nullable=false, options={"default"="current_timestamp()"})
+     * @Groups({"read"})
      */
     private $lastEdited = 'current_timestamp()';
 
@@ -43,6 +50,7 @@ class Image
      * @var bool
      *
      * @ORM\Column(name="privacy", type="boolean", nullable=false)
+    * @Groups({"read", "write"})
      */
     private $privacy;
 
@@ -50,6 +58,7 @@ class Image
      * @var string
      *
      * @ORM\Column(name="image_name", type="string", length=32, nullable=false)
+     * @Groups({"read", "write"})
      */
     private $imageName;
 
@@ -57,6 +66,7 @@ class Image
      * @var string
      *
      * @ORM\Column(name="description", type="string", length=256, nullable=false)
+   * @Groups({"read", "write"})
      */
     private $description;
 
@@ -67,6 +77,7 @@ class Image
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="user_id", referencedColumnName="id")
      * })
+    * @Groups({"read", "write"})
      */
     private $user;
 
@@ -82,6 +93,7 @@ class Image
      *     @ORM\JoinColumn(name="album_id", referencedColumnName="id")
      *   }
      * )
+    * @Groups({"read", "write"})
      */
     private $album;
 
@@ -97,6 +109,7 @@ class Image
      *     @ORM\JoinColumn(name="tag_id", referencedColumnName="id")
      *   }
      * )
+     * @Groups({"read", "write"})
      */
     private $tag;
 

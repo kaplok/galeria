@@ -4,12 +4,16 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use ApiPlatform\Core\Annotation\ApiResource;
+use Symfony\Component\Serializer\Annotation\Groups;
 /**
  * User
  *
  * @ORM\Table(name="user", uniqueConstraints={@ORM\UniqueConstraint(name="id", columns={"id"})})
  * @ORM\Entity
- * @ApiResource()
+  * @ApiResource(
+ *   normalizationContext={"groups" = {"read"}},
+ *   denormalizationContext={"groups" = {"write"}}
+ * )
  */
 class User
 {
@@ -19,6 +23,7 @@ class User
      * @ORM\Column(name="id", type="bigint", nullable=false, options={"unsigned"=true})
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
+    * @Groups({"read", "write"})
      */
     private $id;
 
@@ -26,6 +31,7 @@ class User
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=16, nullable=false)
+     * @Groups({"read", "write"})
      */
     private $name;
 

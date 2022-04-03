@@ -6,13 +6,17 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use ApiPlatform\Core\Annotation\ApiResource;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * Album
  *
  * @ORM\Table(name="album", uniqueConstraints={@ORM\UniqueConstraint(name="id", columns={"id"})}, indexes={@ORM\Index(name="user_id", columns={"user_id"})})
  * @ORM\Entity
- * @ApiResource()
+  * @ApiResource(
+ *   normalizationContext={"groups" = {"read"}},
+ *   denormalizationContext={"groups" = {"write"}}
+ * )
  */
 class Album
 {
@@ -29,6 +33,7 @@ class Album
      * @var \DateTime
      *
      * @ORM\Column(name="created_at", type="datetime", nullable=false, options={"default"="current_timestamp()"})
+     * @Groups({"read"})
      */
     private $createdAt = 'current_timestamp()';
 
@@ -36,6 +41,7 @@ class Album
      * @var \DateTime
      *
      * @ORM\Column(name="last_edited", type="datetime", nullable=false, options={"default"="current_timestamp()"})
+     * @Groups({"read"})
      */
     private $lastEdited = 'current_timestamp()';
 
@@ -43,6 +49,7 @@ class Album
      * @var bool
      *
      * @ORM\Column(name="privacy", type="boolean", nullable=false)
+    * @Groups({"read", "write"})
      */
     private $privacy;
 
@@ -50,6 +57,7 @@ class Album
      * @var string
      *
      * @ORM\Column(name="album_name", type="string", length=32, nullable=false)
+    * @Groups({"read", "write"})
      */
     private $albumName;
 
@@ -57,6 +65,7 @@ class Album
      * @var string
      *
      * @ORM\Column(name="description", type="string", length=256, nullable=false)
+    * @Groups({"read", "write"})
      */
     private $description;
 
@@ -67,6 +76,7 @@ class Album
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="user_id", referencedColumnName="id")
      * })
+    * @Groups({"read", "write"})
      */
     private $user;
 
@@ -74,6 +84,7 @@ class Album
      * @var \Doctrine\Common\Collections\Collection
      *
      * @ORM\ManyToMany(targetEntity="Image", mappedBy="album")
+    * @Groups({"read", "write"})
      */
     private $image;
 

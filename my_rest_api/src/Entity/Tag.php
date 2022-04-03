@@ -6,13 +6,17 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use ApiPlatform\Core\Annotation\ApiResource;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * Tag
  *
  * @ORM\Table(name="tag", uniqueConstraints={@ORM\UniqueConstraint(name="id", columns={"id"})})
  * @ORM\Entity
- * @ApiResource()
+  * @ApiResource(
+ *   normalizationContext={"groups" = {"read"}},
+ *   denormalizationContext={"groups" = {"write"}}
+ * )
  */
 class Tag
 {
@@ -29,6 +33,7 @@ class Tag
      * @var string
      *
      * @ORM\Column(name="tag_name", type="string", length=16, nullable=false)
+     * @Groups({"read", "write"})
      */
     private $tagName;
 
@@ -36,6 +41,7 @@ class Tag
      * @var \Doctrine\Common\Collections\Collection
      *
      * @ORM\ManyToMany(targetEntity="Image", mappedBy="tag")
+    * @Groups({"read", "write"})
      */
     private $image;
 

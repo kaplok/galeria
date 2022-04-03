@@ -4,13 +4,17 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use ApiPlatform\Core\Annotation\ApiResource;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * Comment
  *
  * @ORM\Table(name="comment", uniqueConstraints={@ORM\UniqueConstraint(name="id", columns={"id"})}, indexes={@ORM\Index(name="user_id", columns={"user_id"}), @ORM\Index(name="image_id", columns={"image_id"})})
  * @ORM\Entity
- * @ApiResource()
+  * @ApiResource(
+ *   normalizationContext={"groups" = {"read"}},
+ *   denormalizationContext={"groups" = {"write"}}
+ * )
  */
 class Comment
 {
@@ -20,6 +24,7 @@ class Comment
      * @ORM\Column(name="id", type="bigint", nullable=false, options={"unsigned"=true})
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
+   * @Groups({"read", "write"})
      */
     private $id;
 
@@ -27,6 +32,7 @@ class Comment
      * @var \DateTime
      *
      * @ORM\Column(name="date_posted_at", type="datetime", nullable=false, options={"default"="current_timestamp()"})
+     * @Groups({"read"})
      */
     private $datePostedAt = 'current_timestamp()';
 
@@ -34,6 +40,7 @@ class Comment
      * @var string
      *
      * @ORM\Column(name="contents", type="string", length=256, nullable=false)
+     * @Groups({"read", "write"})
      */
     private $contents;
 
@@ -44,6 +51,7 @@ class Comment
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="image_id", referencedColumnName="id")
      * })
+    * @Groups({"read", "write"})
      */
     private $image;
 
@@ -54,6 +62,7 @@ class Comment
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="user_id", referencedColumnName="id")
      * })
+    * @Groups({"read", "write"})
      */
     private $user;
 
