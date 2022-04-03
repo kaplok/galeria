@@ -5,6 +5,7 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use ApiPlatform\Core\Annotation\ApiResource;
 use Symfony\Component\Serializer\Annotation\Groups;
+use App\Controller\UserByName;
 /**
  * User
  *
@@ -12,7 +13,31 @@ use Symfony\Component\Serializer\Annotation\Groups;
  * @ORM\Entity
   * @ApiResource(
  *   normalizationContext={"groups" = {"read"}},
- *   denormalizationContext={"groups" = {"write"}}
+ *   denormalizationContext={"groups" = {"write"}},
+ * itemOperations={
+ *     "get",
+ *     "patch",
+ *     "delete",
+ *     "put",
+ *     "get_by_name" = {
+ *       "method" = "GET",
+ *       "path" = "/user/{name}",
+ *       "controller" = UserByName::class,
+ *       "read"=false,
+ * "openapi_context" = {
+ *         "parameters" = {
+ *           {
+ *             "name" = "name",
+ *             "in" = "path",
+ *             "description" = "The name of your user",
+ *             "type" = "string",
+ *             "required" = true,
+ *             "example"= "guy",
+ *           },
+ *         },
+ *       },
+ *     },
+ *   }
  * )
  */
 class User
