@@ -99,3 +99,13 @@ sl:warn] [pid 12140:tid 592] AH01909: www.example.com:443:0 server certificate d
 [Sun Apr 03 18:11:00.305307 2022] [ssl:warn] [pid 6136:tid 592] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
 [Sun Apr 03 18:11:00.337221 2022] [ssl:warn] [pid 6136:tid 592] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
 [Sun Apr 03 18:11:00.374090 2022] [mpm_winnt:notice] [pid 6136:tid 592] AH00354: Child: Starting 150 worker threads.
+[Fri Apr 22 16:33:00.618755 2022] [ssl:warn] [pid 11900:tid 392] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Apr 22 16:33:00.666079 2022] [core:warn] [pid 11900:tid 392] AH00098: pid file C:/Github/galeria/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Apr 22 16:33:00.666079 2022] [ssl:warn] [pid 11900:tid 392] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Apr 22 16:33:00.728569 2022] [mpm_winnt:notice] [pid 11900:tid 392] AH00455: Apache/2.4.52 (Win64) OpenSSL/1.1.1m PHP/8.1.4 configured -- resuming normal operations
+[Fri Apr 22 16:33:00.744206 2022] [mpm_winnt:notice] [pid 11900:tid 392] AH00456: Apache Lounge VS16 Server built: Dec 17 2021 10:17:38
+[Fri Apr 22 16:33:00.744206 2022] [core:notice] [pid 11900:tid 392] AH00094: Command line: 'c:\\github\\galeria\\xampp\\apache\\bin\\httpd.exe -d C:/Github/galeria/xampp/apache'
+[Fri Apr 22 16:33:00.744206 2022] [mpm_winnt:notice] [pid 11900:tid 392] AH00418: Parent: Created child process 9540
+[Fri Apr 22 16:33:01.182398 2022] [ssl:warn] [pid 9540:tid 596] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Apr 22 16:33:01.229266 2022] [ssl:warn] [pid 9540:tid 596] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Apr 22 16:33:01.276208 2022] [mpm_winnt:notice] [pid 9540:tid 596] AH00354: Child: Starting 150 worker threads.
