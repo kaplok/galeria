@@ -9,6 +9,13 @@ use Symfony\Component\HttpKernel\Attribute\AsController;
 #[AsController]
 class UserByName extends AbstractController
 {
+    private $doctrine;
+
+    public function __construct(\Doctrine\ORM\EntityManagerInterface $doctrine)
+    {
+        $this->doctrine = $doctrine;
+    }
+
     public function __invoke(string $name)
     {
         $foundUser = $this->getDoctrine()->getRepository(User::class)->findBy(['name' => $name]);
@@ -19,4 +26,11 @@ class UserByName extends AbstractController
  
         return $foundUser;
     }
+
+    private function getDoctrine()
+    {
+        return $this->doctrine;
+    }
+
+
 }
