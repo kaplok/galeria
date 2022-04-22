@@ -1,0 +1,3 @@
+<?php //App%255CEntity%255CImage%2523getAlbum
+
+return [PHP_INT_MAX, []];
