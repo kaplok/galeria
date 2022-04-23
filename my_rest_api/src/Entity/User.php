@@ -21,7 +21,7 @@ use App\Controller\UserByName;
  *     "put",
  *     "get_by_name" = {
  *       "method" = "GET",
- *       "path" = "/user/{name}",
+ *       "path" = "/users/{name}",
  *       "controller" = UserByName::class,
  *       "read"=false,
  * "openapi_context" = {
@@ -30,7 +30,7 @@ use App\Controller\UserByName;
  *             "name" = "name",
  *             "in" = "path",
  *             "description" = "The name of your user",
- *             "type" = "string",
+ *             "type" = "number",
  *             "required" = true,
  *             "example"= "guy",
  *           },

@@ -1,0 +1,3 @@
+<?php //route_name_bd984dbd8d8e1ad77ac7501b08e0f9a5
+
+return [PHP_INT_MAX, 'api_albums_get_item'];

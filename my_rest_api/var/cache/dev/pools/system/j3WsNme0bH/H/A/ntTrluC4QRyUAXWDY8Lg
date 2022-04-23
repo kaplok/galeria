@@ -1,0 +1,3 @@
+<?php //route_name_1af854512b1aae7e2678c22406b27837
+
+return [PHP_INT_MAX, 'api_comments_get_collection'];

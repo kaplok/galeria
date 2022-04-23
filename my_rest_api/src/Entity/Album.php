@@ -15,9 +15,34 @@ use Symfony\Component\Serializer\Annotation\Groups;
  * @ORM\Entity
   * @ApiResource(
  *   normalizationContext={"groups" = {"read"}},
- *   denormalizationContext={"groups" = {"write"}}
+ *   denormalizationContext={"groups" = {"write"}},
+ * itemOperations={
+ *     "get",
+ *     "patch",
+ *     "delete",
+ *     "put",
+ *     "get_album_photos" = {
+ *       "method" = "GET",
+ *       "path" = "/albums/{albumId}",
+ *       "controller" = GetAlbumPhotosController::class,
+ *       "read"=false,
+ * "openapi_context" = {
+ *         "parameters" = {
+ *           {
+ *             "name" = "albumId",
+ *             "in" = "path",
+ *             "description" = "albumik",
+ *             "type" = "string",
+ *             "required" = true,
+ *             "example"= "1",
+ *           },
+ *         },
+ *       },
+ *     },
+ *   }
  * )
  */
+
 class Album
 {
     /**

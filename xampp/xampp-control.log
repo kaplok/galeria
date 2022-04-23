@@ -394,3 +394,69 @@
 18:36:24  [main] 	Deinitializing Modules
 18:36:24  [main] 	Deinitializing Control Panel
 
+16:32:56  [main] 	Initializing Control Panel
+16:32:56  [main] 	Windows Version:  Home  64-bit
+16:32:56  [main] 	XAMPP Version: 8.1.4
+16:32:56  [main] 	Control Panel Version: 3.3.0  [ Compiled: Apr 6th 2021 ]
+16:32:56  [main] 	Running with Administrator rights - good!
+16:32:56  [main] 	XAMPP Installation Directory: "c:\github\galeria\xampp\"
+16:32:56  [main] 	Checking for prerequisites
+16:32:57  [main] 	All prerequisites found
+16:32:57  [main] 	Initializing Modules
+16:32:57  [main] 	The FileZilla module is disabled
+16:32:57  [main] 	The Mercury module is disabled
+16:32:57  [Tomcat] 	Problem detected: Tomcat Not Found!
+16:32:57  [Tomcat] 	Disabling Tomcat buttons
+16:32:57  [Tomcat] 	Run this program from your XAMPP root directory!
+16:32:57  [main] 	Starting Check-Timer
+16:32:57  [main] 	Control Panel Ready
+16:32:59  [Apache] 	Attempting to start Apache app...
+16:32:59  [Apache] 	Status change detected: running
+16:33:00  [mysql] 	Attempting to start MySQL app...
+16:33:00  [mysql] 	Status change detected: running
+16:41:09  [Apache] 	Attempting to stop Apache (PID: 11900)
+16:41:09  [Apache] 	Attempting to stop Apache (PID: 9540)
+16:41:10  [Apache] 	Status change detected: stopped
+16:41:10  [mysql] 	Attempting to stop MySQL app...
+16:41:10  [mysql] 	Status change detected: stopped
+16:53:53  [Apache] 	Attempting to start Apache app...
+16:53:53  [Apache] 	Status change detected: running
+16:53:54  [mysql] 	Attempting to start MySQL app...
+16:53:54  [mysql] 	Status change detected: running
+17:58:50  [Apache] 	Attempting to stop Apache (PID: 18424)
+17:58:50  [Apache] 	Attempting to stop Apache (PID: 6808)
+17:58:51  [Apache] 	Status change detected: stopped
+17:58:51  [mysql] 	Attempting to stop MySQL app...
+17:58:51  [mysql] 	Status change detected: stopped
+17:59:08  [main] 	Deinitializing Modules
+17:59:08  [main] 	Deinitializing Control Panel
+
+18:24:38  [main] 	Initializing Control Panel
+18:24:38  [main] 	Windows Version:  Home  64-bit
+18:24:38  [main] 	XAMPP Version: 8.1.4
+18:24:38  [main] 	Control Panel Version: 3.3.0  [ Compiled: Apr 6th 2021 ]
+18:24:38  [main] 	Running with Administrator rights - good!
+18:24:38  [main] 	XAMPP Installation Directory: "c:\github\galeria\xampp\"
+18:24:38  [main] 	Checking for prerequisites
+18:24:39  [main] 	All prerequisites found
+18:24:39  [main] 	Initializing Modules
+18:24:39  [main] 	The FileZilla module is disabled
+18:24:39  [main] 	The Mercury module is disabled
+18:24:39  [Tomcat] 	Problem detected: Tomcat Not Found!
+18:24:39  [Tomcat] 	Disabling Tomcat buttons
+18:24:39  [Tomcat] 	Run this program from your XAMPP root directory!
+18:24:39  [main] 	Starting Check-Timer
+18:24:39  [main] 	Control Panel Ready
+18:24:41  [Apache] 	Attempting to start Apache app...
+18:24:41  [Apache] 	Status change detected: running
+18:24:41  [mysql] 	Attempting to start MySQL app...
+18:24:42  [mysql] 	Status change detected: running
+19:00:06  [main] 	Executing "c:\github\galeria\xampp\"
+19:49:41  [Apache] 	Attempting to stop Apache (PID: 4444)
+19:49:41  [Apache] 	Attempting to stop Apache (PID: 2972)
+19:49:41  [Apache] 	Status change detected: stopped
+19:49:42  [mysql] 	Attempting to stop MySQL app...
+19:49:42  [mysql] 	Status change detected: stopped
+19:49:47  [main] 	Deinitializing Modules
+19:49:47  [main] 	Deinitializing Control Panel
+

@@ -341,14 +341,34 @@
       <tag name="controller.service_arguments"/>
       <tag name="routing.route_loader"/>
     </service>
+    <service id="App\Controller\FileImageController" class="App\Controller\FileImageController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.jIxfAsi.App\Controller\FileImageController"/>
+      </call>
+    </service>
+    <service id="App\Controller\GetAlbumPhotosController" class="App\Controller\GetAlbumPhotosController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <argument type="service" id="serializer"/>
+      <argument type="service" id="App\Service\AlbumService"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.jIxfAsi.App\Controller\GetAlbumPhotosController"/>
+      </call>
+    </service>
     <service id="App\Controller\UserByName" class="App\Controller\UserByName" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
-      <argument type="service" id="doctrine.orm.default_entity_manager"/>
+      <argument type="service" id="doctrine"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.jIxfAsi.App\Controller\UserByName"/>
       </call>
     </service>
+    <service id="App\Service\AlbumService" class="App\Service\AlbumService" autowire="true" autoconfigure="true">
+      <argument type="service" id="doctrine.orm.default_entity_manager"/>
+    </service>
+    <service id="App\Service\FileService" class="App\Service\FileService" autowire="true" autoconfigure="true"/>
     <service id="argument_metadata_factory" class="Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadataFactory"/>
     <service id="response_listener" class="Symfony\Component\HttpKernel\EventListener\ResponseListener">
       <tag name="kernel.event_subscriber"/>
@@ -4746,6 +4766,13 @@
       <tag name="maker.command"/>
       <argument>C:\Github\galeria\my_rest_api</argument>
     </service>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\FileImageController" class="App\Controller\FileImageController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\FileImageController" class="App\Controller\FileImageController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\FileImageController" class="App\Controller\FileImageController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\GetAlbumPhotosController" class="App\Controller\GetAlbumPhotosController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\GetAlbumPhotosController" class="App\Controller\GetAlbumPhotosController" autowire="true" abstract="true"/>
+    <service id=".instanceof.App\Controller\GetAlbumPhotosController.0.App\Controller\GetAlbumPhotosController" class="App\Controller\GetAlbumPhotosController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\GetAlbumPhotosController" class="App\Controller\GetAlbumPhotosController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\UserByName" class="App\Controller\UserByName" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\UserByName" class="App\Controller\UserByName" autowire="true" abstract="true"/>
     <service id=".instanceof.App\Controller\UserByName.0.App\Controller\UserByName" class="App\Controller\UserByName" autowire="true" abstract="true"/>
@@ -5194,6 +5221,18 @@
         <argument key="serializer" type="service_closure" id="serializer" on-invalid="ignore"/>
         <argument key="twig" type="service_closure" id="twig" on-invalid="ignore"/>
       </argument>
+    </service>
+    <service id=".service_locator.jIxfAsi.App\Controller\FileImageController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\FileImageController"/>
+      <argument>App\Controller\FileImageController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.jIxfAsi" method="withContext"/>
+    </service>
+    <service id=".service_locator.jIxfAsi.App\Controller\GetAlbumPhotosController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\GetAlbumPhotosController"/>
+      <argument>App\Controller\GetAlbumPhotosController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.jIxfAsi" method="withContext"/>
     </service>
     <service id=".service_locator.jIxfAsi.App\Controller\UserByName" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\UserByName"/>

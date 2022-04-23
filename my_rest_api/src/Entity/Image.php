@@ -93,7 +93,7 @@ class Image
      *     @ORM\JoinColumn(name="album_id", referencedColumnName="id")
      *   }
      * )
-    * @Groups({"read", "write"})
+    * @Groups({"write"})
      */
     private $album;
 

@@ -39,10 +39,11 @@ class Tag
 
     /**
      * @var \Doctrine\Common\Collections\Collection
-     *
+     * 
      * @ORM\ManyToMany(targetEntity="Image", mappedBy="tag")
-    * @Groups({"read", "write"})
+    * @Groups({"write"})
      */
+   
     private $image;
 
     /**

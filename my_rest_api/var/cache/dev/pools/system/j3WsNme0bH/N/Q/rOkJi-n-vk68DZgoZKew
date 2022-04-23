@@ -1,0 +1,3 @@
+<?php //route_name_3ecc744767b76a369000f2c688df1ba8
+
+return [PHP_INT_MAX, 'api_images_get_collection'];

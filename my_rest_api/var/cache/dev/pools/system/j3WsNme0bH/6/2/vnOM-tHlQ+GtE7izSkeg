@@ -1,0 +1,3 @@
+<?php //route_name_21b06a0f647bfa27d03b60f763c2048d
+
+return [PHP_INT_MAX, 'api_images_get_item'];

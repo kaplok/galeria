@@ -115,7 +115,7 @@ return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\
                     ],
                     'get_by_name' => [
                         'method' => 'GET',
-                        'path' => '/user/{name}',
+                        'path' => '/users/{name}',
                         'controller' => 'App\\Controller\\UserByName',
                         'read' => false,
                         'openapi_context' => [
@@ -124,7 +124,7 @@ return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\
                                     'name' => 'name',
                                     'in' => 'path',
                                     'description' => 'The name of your user',
-                                    'type' => 'string',
+                                    'type' => 'number',
                                     'required' => true,
                                     'example' => 'guy',
                                 ],
