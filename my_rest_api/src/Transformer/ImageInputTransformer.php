@@ -15,11 +15,13 @@ class ImageInputTransformer implements DataTransformerInterface {
     private EntityManagerInterface $entityManager;
     private FileService $fileService;
     private ValidatorInterface $validator;
+    public static ImageInputTransformer $instance;
 
     public function __construct(EntityManagerInterface $entityManager, FileService $fileService, ValidatorInterface $validator) {
         $this->entityManager = $entityManager;
         $this->fileService = $fileService;
         $this->validator = $validator;
+        $instance = $this;
     }
 
     /**

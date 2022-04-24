@@ -84,7 +84,7 @@ sub AUTOLOAD {
 
 # tie returns the object, so the value returned to require will be true.
 tie %Config, 'Config', {
-    archlibexp => '\\Github\\galeria\\xampp\\perl\\lib',
+    archlibexp => '\\Users\\Cosmo\\Documents\\GitHub\\galeria\\xampp\\perl\\lib',
     archname => 'MSWin32-x64-multi-thread',
     cc => 'gcc',
     d_readlink => undef,
@@ -96,14 +96,14 @@ tie %Config, 'Config', {
     inc_version_list => '',
     intsize => '4',
     ldlibpthname => '',
-    libpth => '\\Github\\galeria\\xampp\\c\\lib \\xampp\\c\\x86_64-w64-mingw32\\lib \\xampp\\c\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0',
+    libpth => '\\Users\\Cosmo\\Documents\\GitHub\\galeria\\xampp\\c\\lib \\xampp\\c\\x86_64-w64-mingw32\\lib \\xampp\\c\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0',
     osname => 'MSWin32',
     osvers => '10.0.19042.746',
     path_sep => ';',
-    privlibexp => '\\Github\\galeria\\xampp\\perl\\lib',
-    scriptdir => '\\Github\\galeria\\xampp\\perl\\bin',
-    sitearchexp => '\\Github\\galeria\\xampp\\perl\\site\\lib',
-    sitelibexp => '\\Github\\galeria\\xampp\\perl\\site\\lib',
+    privlibexp => '\\Users\\Cosmo\\Documents\\GitHub\\galeria\\xampp\\perl\\lib',
+    scriptdir => '\\Users\\Cosmo\\Documents\\GitHub\\galeria\\xampp\\perl\\bin',
+    sitearchexp => '\\Users\\Cosmo\\Documents\\GitHub\\galeria\\xampp\\perl\\site\\lib',
+    sitelibexp => '\\Users\\Cosmo\\Documents\\GitHub\\galeria\\xampp\\perl\\site\\lib',
     so => 'dll',
     useithreads => 'define',
     usevendorprefix => 'define',

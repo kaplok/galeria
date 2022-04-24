@@ -40,7 +40,7 @@ goto endofperl
 @rem ';
 #!perl
 #line 43
-    eval 'exec \Github\galeria\xampp\perl\bin\perl.exe -S $0 ${1+"$@"}'
+    eval 'exec \Users\Cosmo\Documents\GitHub\galeria\xampp\perl\bin\perl.exe -S $0 ${1+"$@"}'
 	if $running_under_some_shell;
 
 my $config_tag1 = '5.32.1 - Sun Jan 24 15:01:28 2021';

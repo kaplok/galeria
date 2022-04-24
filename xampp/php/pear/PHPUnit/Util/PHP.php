@@ -114,7 +114,7 @@ abstract class PHPUnit_Util_PHP
                     PHP_BINDIR . '/php',
                     PHP_BINDIR . '/php-cli.exe',
                     PHP_BINDIR . '/php.exe',
-                    'C:\long_subdirectory_for\Github\galeria\xampp\php\.\php.exe',
+                    'C:\long_subdirectory_for\Users\Cosmo\Documents\GitHub\galeria\xampp\php\.\php.exe',
                 );
                 foreach ($possibleBinaryLocations as $binary) {
                     if (is_readable($binary)) {
