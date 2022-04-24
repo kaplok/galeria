@@ -8,7 +8,7 @@ isset($_POST["privacy"]) ? $privacy = $_POST["privacy"] : $privacy = "0";
 $user_id = $_POST["user_id"];
 $user_name = $_POST["user_name"];
 $albums = $_POST["albums"];
-$balls = $_POST["balls"];
+
 /*echo $file;
 var_dump($file);
 var_dump($balls);
@@ -39,8 +39,8 @@ $link = mysqli_connect("localhost", "root", "", "baza");
         fclose($file);
 
         $fileExt = $ext; //fix
-$fullName = $fileName . "." . $fileExt;
-        rename($filePath, $fileName);
+$fullName =$filePath. "." . $fileExt;
+        rename($filePath, $fullName);
         $link = mysqli_connect("localhost", "root", "", "baza");
 
         mysqli_query($link,  "INSERT INTO image(image_name, description, privacy, user_id) 
