@@ -2,14 +2,14 @@
 
 namespace App\Service;
 
-use Symfony\Component\Mime\MimeTypes;
+//use Symfony\Component\Mime\MimeTypes;
 
 class FileService {
 
     /** @var string */
     //TODO move it to config
-    public const FILES_PATH = "/home/igormaculewicz/test";
-    public const ENDPOINT_PATH = "/image/";
+    public const GALERIA_PATH = "H:\\Users\\Cosmo\\Documents\\GitHub\\galeria";
+    public const FILES_PATH = "\\files\\";
 
     /**
      * @param string $base64
@@ -23,10 +23,10 @@ class FileService {
         fwrite($file, base64_decode($base64));
         fclose($file);
 
-        $fileExt = $this->getFileExt($filePath);
+        $fileExt = "png";
         rename($filePath, $filePath . '.' . $fileExt);
 
-        return self::ENDPOINT_PATH . $fileName . '.' . $fileExt;
+        return self::GALERIA_PATH.self::FILES_PATH . $fileName . '.' . $fileExt;
     }
 
     /**
@@ -34,7 +34,7 @@ class FileService {
      * @return string
      */
     private function generateFilePath(string $fileName): string {
-        return self::FILES_PATH . '/' . $fileName;
+        return self::GALERIA_PATH .self::FILES_PATH . '\\' . $fileName;
     }
 
     /**
@@ -49,9 +49,9 @@ class FileService {
      * @return string
      */
     private function getFileExt(string $filePath): string {
-        $extensionGuesser = new MimeTypes();
-
-        return $extensionGuesser->getExtensions($extensionGuesser->guessMimeType($filePath))[0];
+       // $extensionGuesser = new MimeTypes();
+return "png";
+        //return $extensionGuesser->getExtensions($extensionGuesser->guessMimeType($filePath))[0];
     }
 
 }

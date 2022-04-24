@@ -7,7 +7,7 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use ApiPlatform\Core\Annotation\ApiResource;
 use Symfony\Component\Serializer\Annotation\Groups;
-
+use App\Controller\FileImageController;
 /**
  * Image
  *
@@ -15,9 +15,34 @@ use Symfony\Component\Serializer\Annotation\Groups;
  * @ORM\Entity
  * @ApiResource(
  *   normalizationContext={"groups" = {"read"}},
- *   denormalizationContext={"groups" = {"write"}}
+ *   denormalizationContext={"groups" = {"write"}},
+ *   itemOperations={
+ *     "get",
+ *     "patch",
+ *     "delete",
+ *     "put",
+ *     "get_with_base64" = {
+ *       "method" = "GET",
+ *       "path" = "/image/{imageName}",
+ *       "controller" = FileImageController::class,
+ *       "read"=false,
+ *      "openapi_context" = {
+ *         "parameters" = {
+ *           {
+ *             "name" = "imageName",
+ *             "in" = "path",
+ *             "description" = "imageName of image, raw image name on drive",
+ *             "type" = "string",
+ *             "required" = true,
+ *             "example"= "9347932749.41341342.png",
+ *           },
+ *         },
+ *       },
+ *     },
+ *   }
  * )
  */
+
 class Image
 {
     /**

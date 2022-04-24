@@ -4775,6 +4775,7 @@
     </service>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\FileImageController" class="App\Controller\FileImageController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\FileImageController" class="App\Controller\FileImageController" autowire="true" abstract="true"/>
+    <service id=".instanceof.App\Controller\FileImageController.0.App\Controller\FileImageController" class="App\Controller\FileImageController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\FileImageController" class="App\Controller\FileImageController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\GetAlbumPhotosController" class="App\Controller\GetAlbumPhotosController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\GetAlbumPhotosController" class="App\Controller\GetAlbumPhotosController" autowire="true" abstract="true"/>

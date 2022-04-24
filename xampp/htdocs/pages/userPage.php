@@ -18,7 +18,7 @@ $resultAlbums = mysqli_query($link, "SELECT * FROM album WHERE user_id='$id'");
 while ($row = mysqli_fetch_assoc($resultAlbums)) {
     $output[] =
         [
-            'id' => $row["user_id"],
+            'id' => $row["id"],
             'user_id' => $row["user_id"],
             'album_name' => $row["album_name"],
             'description' => $row["description"],
@@ -84,7 +84,8 @@ echo $name;
             foreach ($albums as $album) {
                 $albumId = $album["id"];
                 $albumName = $album["album_name"];
-                echo "<input type='checkbox' name='album$index' value='$albumId' onclick='handleClick(this);'>$albumName<br>";
+
+                echo "<input type='checkbox' name='album$index' value='$albumId' onclick='handleClick(this);'>$albumName id:$albumId<br>";
                 $index++;
             }
         }
@@ -117,7 +118,32 @@ echo $name;
 
     </form>
 </div>
+<br>
+
+
+<label>Select album to show:
+    <select onchange="showAlbum(this)">
+
+        <?php
+        //loop over $albums
+        if (isset($albums)) {
+            $index = 0;
+            foreach ($albums as $album) {
+                $albumId = $album["id"];
+                $albumName = $album["album_name"];
+
+                echo "<option value=\"$albumId\">$albumName id:$albumId</option>";
+                $index++;
+            }
+        }
+        ?>
+    </select>
+</label>
+<div id="albumShow">
+
+</div>
 <script>
+ albumShow=   document.getElementById("albumShow");
     function sendFile() {
         const selectedFile = document.getElementById('fileInput').files[0];
         console.log(selectedFile);
@@ -138,15 +164,38 @@ echo $name;
                         user_name: $("input[name='user_name']").val(),
                         privacy: $("input[name='privacy']").val(),
                         albums: albums,
-                        balls:"balls"
                     },
                     success: function (data) {
-                        console.log(data);
+                      //  console.log(data);
+                        alert(data);
                     }
                 });
             }
         );
         reader.readAsDataURL(selectedFile);
+    }
+    function showAlbum(obj){
+        $.ajax({
+            url: "albumShow.php",
+            type: "POST",
+            data: {
+                albumID: obj.value,
+
+            },
+            success: function (data) {
+                //remove all children of albumShow
+                while (albumShow.firstChild) {
+                    albumShow.removeChild(albumShow.firstChild);
+                }
+                for (var i = 0; i < data.length; i++) {
+                    var img = document.createElement("img");
+                    img.src = "data:image/jpeg;base64," + data[i].image;
+                    img.width = "200";
+                    img.height = "200";
+                    albumShow.appendChild(img);
+                }
+            }
+        });
     }
 </script>
 </body>

@@ -19,6 +19,6 @@ added new album
     function OpenMainPage() {
         location.href = "userPage.php?name=<?php echo $user_name ?>";
     }
-    setInterval(function(){OpenMainPage()},1000);
+    setInterval(function(){OpenMainPage()},200);
 
 </script>
